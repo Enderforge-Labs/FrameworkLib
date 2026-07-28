@@ -975,6 +975,20 @@ public final class Utils extends UtilityClassBase {
      * @return The resulting value.
      */
     public static int interpolateI(final int v1, final int v2, final float factor) {
-        return Math.round(v1 + (v2 - v1) * factor);
+        return (int)Math.round(v1 + (v2 - v1) * (double)factor);
+    }
+
+
+
+
+    /**
+     * Interpolates two long values.
+     * @param v1 The first value.
+     * @param v2 The second value.
+     * @param factor The interpolation factor.
+     * @return The resulting value.
+     */
+    public static long interpolateI(final long v1, final long v2, final float factor) {
+        return Math.round(v1 + (v2 - v1) * (double)factor);
     }
 }
